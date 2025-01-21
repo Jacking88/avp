@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 启动 vehicle_visualization 节点 -->
+    <node name="vehicle_visualization_node" pkg="vehicle_visualization" type="vehicle_visualization" output="screen">
+        <!-- 你可以在这里添加任何必要的参数 -->
+        <!-- 例如，如果需要读取某个参数 -->
+        <!-- <param name="param_name" value="param_value" /> -->
+    </node>
+
+    <!-- 启动 RViz -->
+    <node name="rviz" pkg="rviz" type="rviz" required="true">
+        <!-- 指定 RViz 配置文件 -->
+        <param name="config" value="/home/lmk/file/OScode/AVP/L1/catkin_ws/src/vehicle_visualization_code/vehicle_visualization.rviz"/>
+
+        <!-- <param name="config" value="$(find vehicle_visualization)/vehicle_visualization.rviz"/> -->
+        <!-- <param name="config" value="$(find vehicle_visualization_code)/vehicle_visualization.rviz"/> -->
+    </node>
+</launch>
