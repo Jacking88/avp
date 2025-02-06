@@ -1,0 +1,13 @@
+# 忽略 ROS 编译生成的文件夹
+/build
+/devel
+
+# 忽略所有临时文件
+*.swp
+*.bak
+*.tmp
+
+# 忽略 IDE 编辑器生成的文件
+.vscode/
+.idea/
+
