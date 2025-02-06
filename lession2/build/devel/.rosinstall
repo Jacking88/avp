@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lmk/file/OScode/AVP/L2/catkin_ws/src/vehicle_state_estimation_code/build/devel/setup.sh
