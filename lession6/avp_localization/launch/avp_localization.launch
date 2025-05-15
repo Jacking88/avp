@@ -1,0 +1,12 @@
+<launch>
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find avp_localization)/launch/avp_localization.rviz" /> -->
+
+    <node name="avp_localization" pkg="avp_localization" type="avp_localization" output="screen">
+        <param name="auto_run" type="bool" value="false" />
+        <param name="show_img" type="bool" value="true" />
+    </node>
+
+     <arg name="bag_name" default="$(find avp_localization)/data/avp_localization.bag" />
+    <node name="play_dataset" pkg="rosbag" type="play" args="$(arg bag_name) -r 0.5 --wait-for-subscribers" />
+</launch>
+
